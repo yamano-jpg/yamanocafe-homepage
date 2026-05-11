@@ -1,0 +1,1083 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="福島県いわき市小名浜の昭和レトロ風カフェ、やまのかふぇ。モーニング、ランチ、手作りデザート、テイクアウトをご用意。店舗裏に駐車場あり。">
+    <title>やまのかふぇ | いわき　小名浜の昭和レトロ風カフェ</title>
+    <style>
+        :root {
+            --ink: #2c211b;
+            --coffee: #5b321f;
+            --cocoa: #7d4d35;
+            --clay: #b75f3a;
+            --mint: #2f6f5e;
+            --sky: #dcefed;
+            --paper: #fff8ed;
+            --cream: #f5eadb;
+            --line: rgba(65, 42, 30, 0.16);
+            --shadow: 0 24px 58px rgba(47, 32, 22, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Yu Gothic", "Hiragino Sans", "Meiryo", sans-serif;
+            background: var(--paper);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .shell {
+            width: min(1160px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 96vh;
+            color: #fffaf1;
+            background:
+                linear-gradient(90deg, rgba(30, 17, 12, 0.78), rgba(30, 17, 12, 0.36) 52%, rgba(30, 17, 12, 0.16)),
+                url("assets/42389_0.jpg") center/cover;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 24px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+        }
+
+        .brand img {
+            width: 54px;
+            height: 54px;
+            padding: 7px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: rgba(255, 250, 241, 0.94);
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.94rem;
+        }
+
+        .nav a {
+            padding: 6px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .nav a:hover {
+            border-color: rgba(255, 250, 241, 0.78);
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 380px;
+            gap: 34px;
+            align-items: end;
+            padding: 84px 0 78px;
+        }
+
+        .eyebrow,
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            color: var(--clay);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+        }
+
+        .hero .eyebrow {
+            color: #ffdca7;
+            margin-bottom: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            max-width: 780px;
+            margin-bottom: 24px;
+            font-size: clamp(3.1rem, 7vw, 6.2rem);
+            line-height: 1.02;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-lead {
+            max-width: 640px;
+            margin-bottom: 30px;
+            color: rgba(255, 250, 241, 0.92);
+            font-size: 1.07rem;
+            line-height: 2;
+        }
+
+        .hero-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            width: fit-content;
+            max-width: 720px;
+            margin-bottom: 22px;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 250, 241, 0.28);
+            border-radius: 8px;
+            background: rgba(255, 250, 241, 0.14);
+            color: #fff8ed;
+            font-size: 0.94rem;
+            font-weight: 800;
+            line-height: 1.7;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-info span + span::before {
+            content: "";
+            width: 1px;
+            height: 1.1em;
+            background: rgba(255, 250, 241, 0.35);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 174px;
+            min-height: 48px;
+            padding: 13px 22px;
+            border-radius: 999px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 26px rgba(22, 14, 10, 0.18);
+        }
+
+        .button-primary {
+            background: #f2c27d;
+            color: #332014;
+        }
+
+        .button-ghost {
+            border: 1px solid rgba(255, 250, 241, 0.36);
+            background: rgba(255, 250, 241, 0.12);
+            color: #fffaf1;
+        }
+
+        .hero-panel {
+            padding: 16px;
+            border: 1px solid rgba(255, 250, 241, 0.32);
+            border-radius: 8px;
+            background: rgba(255, 250, 241, 0.9);
+            color: var(--ink);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-panel img {
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .hero-panel h2 {
+            margin: 16px 0 8px;
+            color: var(--coffee);
+            font-size: 1.45rem;
+            line-height: 1.35;
+        }
+
+        .hero-panel p {
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
+        main {
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 76px 0;
+        }
+
+        .section-soft {
+            background: var(--cream);
+        }
+
+        .section-sky {
+            background: linear-gradient(180deg, #e6f3f0, #fff8ed);
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+            gap: 24px;
+            align-items: end;
+            margin-bottom: 28px;
+        }
+
+        .section-head h2 {
+            margin: 10px 0 0;
+            color: var(--coffee);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.18;
+        }
+
+        .section-head p,
+        .lead {
+            margin-bottom: 0;
+            line-height: 1.9;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 22px;
+        }
+
+        .feature-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 42px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-copy h3 {
+            color: var(--coffee);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            line-height: 1.25;
+        }
+
+        .feature-copy p {
+            line-height: 1.95;
+        }
+
+        .feature-photo {
+            min-height: 520px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .mini-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .mini-item {
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff8ed;
+            line-height: 1.7;
+        }
+
+        .mini-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--mint);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card,
+        .post-card,
+        .info-card {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fffdf8;
+            box-shadow: 0 16px 40px rgba(47, 32, 22, 0.1);
+        }
+
+        .menu-card img {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .menu-body {
+            padding: 22px;
+        }
+
+        .menu-body h3 {
+            margin: 8px 0 10px;
+            color: var(--coffee);
+            font-size: 1.35rem;
+        }
+
+        .menu-body p {
+            margin-bottom: 0;
+            line-height: 1.85;
+        }
+
+        .price {
+            display: inline-flex;
+            margin-top: 16px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #e7f0dc;
+            color: #2d5f42;
+            font-weight: 800;
+        }
+
+        .special {
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .special-photo img {
+            height: 100%;
+            min-height: 620px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .special-copy {
+            padding: 46px;
+            border-radius: 8px;
+            background: var(--coffee);
+            color: #fff8ed;
+        }
+
+        .special-copy .tag {
+            color: #f2c27d;
+        }
+
+        .special-copy h2 {
+            margin: 12px 0 18px;
+            font-size: clamp(2.2rem, 4.5vw, 4rem);
+            line-height: 1.12;
+        }
+
+        .special-copy p {
+            line-height: 2;
+            color: rgba(255, 248, 237, 0.9);
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .badge {
+            padding: 9px 12px;
+            border: 1px solid rgba(255, 248, 237, 0.24);
+            border-radius: 999px;
+            color: #fff8ed;
+            font-weight: 800;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr 0.85fr;
+            grid-auto-rows: 230px;
+            gap: 14px;
+        }
+
+        .gallery img {
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 12px 30px rgba(47, 32, 22, 0.12);
+        }
+
+        .gallery .tall {
+            grid-row: span 2;
+        }
+
+        .gallery .wide {
+            grid-column: span 2;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .menu-list-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+            gap: 22px;
+            align-items: start;
+        }
+
+        .takeout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+            gap: 22px;
+            align-items: center;
+        }
+
+        .takeout-photo,
+        .takeout-copy {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+            box-shadow: 0 16px 40px rgba(47, 32, 22, 0.1);
+            overflow: hidden;
+        }
+
+        .takeout-photo img {
+            max-height: 640px;
+            object-fit: contain;
+            background: #2d241d;
+        }
+
+        .takeout-copy {
+            padding: 34px;
+        }
+
+        .takeout-copy h2 {
+            margin: 10px 0 16px;
+            color: var(--coffee);
+            font-size: clamp(2rem, 4vw, 3.1rem);
+            line-height: 1.18;
+        }
+
+        .takeout-copy p {
+            line-height: 1.95;
+        }
+
+        .takeout-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+
+        .morning-card,
+        .menu-sheet,
+        .menu-summary {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+            box-shadow: 0 16px 40px rgba(47, 32, 22, 0.1);
+            overflow: hidden;
+        }
+
+        .morning-card img {
+            max-height: 620px;
+            object-fit: contain;
+            background: #f7efe4;
+        }
+
+        .morning-body,
+        .menu-summary {
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .morning-body h3,
+        .menu-summary h3 {
+            margin: 8px 0 12px;
+            color: var(--coffee);
+            font-size: 1.55rem;
+        }
+
+        .morning-body p,
+        .menu-summary p {
+            line-height: 1.85;
+        }
+
+        .menu-summary-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .summary-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 14px;
+            align-items: baseline;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--line);
+            line-height: 1.65;
+        }
+
+        .summary-row:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .summary-row strong {
+            color: var(--mint);
+        }
+
+        .summary-row span {
+            color: var(--coffee);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .menu-sheets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .menu-sheet img {
+            height: 100%;
+            max-height: 720px;
+            object-fit: contain;
+            background: #f7efe4;
+        }
+
+        .post-card img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .post-card p {
+            min-height: 90px;
+            margin: 0;
+            padding: 16px;
+            line-height: 1.75;
+            font-weight: 700;
+        }
+
+        .info-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            padding: 30px;
+        }
+
+        .info-card h2 {
+            margin: 8px 0 18px;
+            color: var(--coffee);
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+        }
+
+        .info-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 112px 1fr;
+            gap: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed var(--line);
+            line-height: 1.75;
+        }
+
+        .info-row:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .info-row strong {
+            color: var(--mint);
+        }
+
+        .footer {
+            padding: 28px 16px 44px;
+            text-align: center;
+            color: rgba(44, 33, 27, 0.68);
+            background: #fff8ed;
+        }
+
+        @media (max-width: 980px) {
+            .hero-inner,
+            .section-head,
+            .feature-grid,
+            .special,
+            .takeout,
+            .info-layout,
+            .menu-grid,
+            .menu-list-layout,
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-panel {
+                max-width: 430px;
+            }
+
+            .feature-photo,
+            .special-photo img {
+                min-height: 360px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 680px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav {
+                gap: 10px 14px;
+            }
+
+            .hero-inner {
+                padding: 54px 0 48px;
+            }
+
+            h1 {
+                font-size: 2.75rem;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .hero-info {
+                width: 100%;
+            }
+
+            .hero-info span {
+                width: 100%;
+            }
+
+            .hero-info span + span::before {
+                display: none;
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .feature-copy,
+            .special-copy,
+            .info-card {
+                padding: 24px;
+            }
+
+            .mini-list,
+            .gallery,
+            .menu-sheets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery .wide {
+                grid-column: auto;
+            }
+
+            .gallery .tall {
+                grid-row: auto;
+            }
+
+            .info-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="shell">
+            <div class="topbar">
+                <a class="brand" href="#">
+                    <img src="assets/42380_0.jpg" alt="やまのかふぇ ロゴ">
+                    <span>やまのかふぇ</span>
+                </a>
+                <nav class="nav" aria-label="ページ内メニュー">
+                    <a href="#about">お店について</a>
+                    <a href="#menu">おすすめ</a>
+                    <a href="#menu-list">メニュー表</a>
+                    <a href="#special">新メニュー</a>
+                    <a href="#gallery">デザート</a>
+                    <a href="#access">アクセス</a>
+                </nav>
+            </div>
+
+            <div class="hero-inner">
+                <div>
+                    <span class="eyebrow">ONAHAMA LUNCH AND CAFE</span>
+                    <h1>ほっと一息、<br>昭和レトロな<br>小名浜カフェ。</h1>
+                    <p class="hero-lead">
+                        木のぬくもりがある店内で、ランチプレート、手作りデザート、コーヒーをゆっくりと。
+                        コーヒーは一杯ずつハンドドリップで淹れています。
+                        ひとりでも、家族でも、友達同士でもふらっと入りやすい「やまのかふぇ」です。
+                    </p>
+                    <div class="hero-info" aria-label="営業情報">
+                        <span>9:00 - 18:00</span>
+                        <span>火・水曜定休</span>
+                        <span>店舗裏に駐車場あり</span>
+                    </div>
+                    <div class="actions">
+                        <a class="button button-primary" href="#menu">おすすめを見る</a>
+                        <a class="button button-ghost" href="https://maps.app.goo.gl/K5pyjYDAqVaxX4e99" target="_blank" rel="noopener noreferrer">Googleマップ</a>
+                        <a class="button button-ghost" href="https://www.instagram.com/yamanocafe202508?igsh=NGI5NGpnOGExeGZ6" target="_blank" rel="noopener noreferrer">Instagramへ</a>
+                    </div>
+                </div>
+
+                <aside class="hero-panel">
+                    <img src="assets/42415_0.jpg" alt="ホットサンドランチ">
+                    <h2>人気のホットサンドランチ</h2>
+                    <p>こんがり焼いたサンドに、サラダとみそ汁を添えて。朝にも昼にも似合う、満足感のある一皿です。</p>
+                </aside>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-soft" id="about">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">ABOUT</span>
+                        <h2>あたたかな灯りと、<br>木のテーブルが迎える場所。</h2>
+                    </div>
+                    <p>
+                        カウンター席もテーブル席もある、落ち着いた店内。ランチ、カフェタイム、ちょっとした休憩まで、気軽に過ごせます。
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-copy">
+                        <span class="tag">WELCOME</span>
+                        <h3>お腹も気持ちも、ちょうどよく満たされる時間に。</h3>
+                        <p>
+                            プレートランチ、パスタ、カレー、デザート、ドリンクまで。
+                            写真に残したくなる見た目と、ほっとする味わいを大切にしています。
+                        </p>
+                        <div class="mini-list">
+                            <div class="mini-item"><strong>ランチ</strong>ホットサンド、オムライス、ミートドリアなど。</div>
+                            <div class="mini-item"><strong>カフェ</strong>コーヒー、ラテ、パフェ、ケーキ。</div>
+                            <div class="mini-item"><strong>店内</strong>木目と照明がやさしい落ち着いた空間。</div>
+                            <div class="mini-item"><strong>最新情報</strong>営業日や新メニューはInstagramで発信。</div>
+                        </div>
+                    </article>
+                    <img class="feature-photo" src="assets/42409_0.jpg" alt="やまのかふぇの店内">
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">RECOMMEND</span>
+                        <h2>おすすめメニュー</h2>
+                    </div>
+                    <p>ランチやメニューは季節によって変わります。<br>最新情報は店頭・Instagramでご確認ください。</p>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-card">
+                        <img src="assets/42415_0.jpg" alt="ホットサンドランチ">
+                        <div class="menu-body">
+                            <span class="tag">LUNCH</span>
+                            <h3>ホットサンドランチ</h3>
+                            <p>たまごと具材をはさんだ、香ばしいホットサンド。サラダとみそ汁も一緒に楽しめます。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/42394_0.jpg" alt="ミートドリアランチ">
+                        <div class="menu-body">
+                            <span class="tag">LUNCH</span>
+                            <h3>ミートドリアランチ</h3>
+                            <p>とろけるチーズとコクのあるミートソースを重ねた、あつあつの人気ランチ。サラダとみそ汁付きで、しっかり満たされます。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/20620.jpg" alt="オムライスランチ">
+                        <div class="menu-body">
+                            <span class="tag">LUNCH</span>
+                            <h3>オムライスランチ</h3>
+                            <p>ふんわりと焼かれたオムライス。サラダとみそ汁も一緒に楽しめます。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="menu-list">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">MENU LIST</span>
+                        <h2>やまのかふぇ　メニュー表</h2>
+                    </div>
+                    <p>価格は税込、仕入れ状況により付け合わせが変わる場合があります。</p>
+                </div>
+
+                <div class="menu-list-layout">
+                    <div>
+                        <article class="morning-card">
+                            <img src="assets/20559_0.jpg" alt="やまのかふぇのモーニングメニュー表">
+                            <div class="morning-body">
+                                <span class="tag">MORNING</span>
+                                <h3>やまのかふぇモーニング</h3>
+                                <p>
+                                    毎日9:00から11:00まで。ホットサンドとコーヒーの<br>モーニングセット、ホットケーキセットを選べます。
+                                </p>
+                                <div class="menu-summary-list">
+                                    <div class="summary-row"><strong>モーニングセット</strong><span>600円</span></div>
+                                    <div class="summary-row"><strong>ホットケーキセット</strong><span>700円</span></div>
+                                    <div class="summary-row"><strong>スペシャルモーニングセット</strong><span>900円</span></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="menu-summary">
+                            <span class="tag">PICK UP</span>
+                            <h3>セットメニュー</h3>
+                            <p>ランチは11:00から15:00まで。ケーキやプリンのセットも<br>カフェタイムにおすすめです。</p>
+                            <div class="menu-summary-list">
+                                <div class="summary-row"><strong>ミートドリアランチ</strong><span>1,400円</span></div>
+                                <div class="summary-row"><strong>オムライスランチ</strong><span>1,300円</span></div>
+                                <div class="summary-row"><strong>ホットサンドランチ</strong><span>1,000円</span></div>
+                                <div class="summary-row"><strong>ケーキセット</strong><span>850円</span></div>
+                                <div class="summary-row"><strong>プリンセット</strong><span>750円</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="menu-sheets-grid">
+                        <article class="menu-sheet">
+                            <img src="assets/20560_0.jpg" alt="やまのかふぇ案内とQRコード">
+                        </article>
+                        <article class="menu-sheet">
+                            <img src="assets/20563_0.jpg" alt="フードとスイーツのメニュー表">
+                        </article>
+                        <article class="menu-sheet">
+                            <img src="assets/20562_0.jpg" alt="ドリンクメニュー表">
+                        </article>
+                        <article class="menu-sheet">
+                            <img src="assets/20561_0.jpg" alt="ランチセットとケーキセットのメニュー表">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="shell takeout">
+                <div class="takeout-photo">
+                    <img src="assets/20572.jpg" alt="テイクアウトメニューの案内">
+                </div>
+                <article class="takeout-copy">
+                    <span class="tag">TAKE OUT</span>
+                    <h2>おうちでも、<br>やまのかふぇの味を。</h2>
+                    <p>
+                        キーマカレー、オムライス、ホットサンド、ケーキなど、一部メニューは<br>テイクアウトでもご用意できます。
+                        お昼の時間帯は混み合う場合が<br>ありますのでお早めのご注文がおすすめです。
+                    </p>
+                    <div class="takeout-list">
+                        <div class="summary-row"><strong>キーマカレー</strong><span>950円</span></div>
+                        <div class="summary-row"><strong>オムライス</strong><span>950円</span></div>
+                        <div class="summary-row"><strong>ホットサンド</strong><span>750円</span></div>
+                        <div class="summary-row"><strong>ケーキ</strong><span>550円</span></div>
+                        <div class="summary-row"><strong>ドリンク各種(フロート系をのぞく)</strong></div>
+                    </div>
+                    <p>
+                        テイクアウトのご予約は、公式InstagramのDM、または店頭でのご注文にてお願いいたします。
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-sky" id="special">
+            <div class="shell special">
+                <div class="special-photo">
+                    <img src="assets/42388_0.jpg" alt="ミニチョコバナナパフェ">
+                </div>
+                <article class="special-copy">
+                    <span class="tag">NEW SWEETS</span>
+                    <h2>食後にちょうどいい、ミニチョコ<br>バナナパフェ</h2>
+                    <p>
+                        バナナ、チョコ、アイスの王道しあわせパフェ。食後にも頼みやすいサイズ感で、写真にも残したくなるかわいさです。
+                    </p>
+                    <div class="badge-row">
+                        <span class="badge">普通サイズもあります</span>
+                        <span class="badge">税込450円</span>
+                        <span class="badge">写真OK</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="gallery">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">GALLERY</span>
+                        <h2>大好評の店主手作りデザート</h2>
+                    </div>
+                    <p>店主がひとつひとつ手作りしているデザートです。<br>ご好評につき、売り切れとなる場合がございます。</p>
+                </div>
+
+                <div class="gallery">
+                    <img class="tall" src="assets/42418_0.jpg" alt="デザートプレート">
+                    <img src="assets/20621.jpg" alt="プリンとコーヒー">
+                    <img src="assets/42404_0.jpg" alt="コーヒーとチーズケーキ">
+                    <img src="assets/42419_0.jpg" alt="抹茶ケーキ">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">INSTAGRAM STYLE</span>
+                        <h2>最新のお知らせをInstagramで</h2>
+                    </div>
+                    <p>Instagramで日常の写真やその日のおすすめメニューをご覧になれます。</p>
+                </div>
+
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <img src="assets/42382_0.jpg" alt="ホットサンドランチのお知らせ">
+                        <p>人気のホットサンドランチ。お得なランチプレートでゆっくりと。</p>
+                    </article>
+                    <article class="post-card">
+                        <img src="assets/42383_0.jpg" alt="ミートドリアランチのお知らせ">
+                        <p>あつあつミートドリアランチ。とろけるチーズで最後までほかほか。</p>
+                    </article>
+                    <article class="post-card">
+                        <img src="assets/42390.jpg" alt="ミニチョコバナナパフェのお知らせ">
+                        <p>新登場のミニチョコバナナパフェ。食後にもぴったりです。</p>
+                    </article>
+                    <article class="post-card">
+                        <img src="assets/42411_0.jpg" alt="ランチメニューまとめ">
+                        <p>ランチ選びに迷ったら、写真で気になる一皿を見つけてください。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="access">
+            <div class="shell info-layout">
+                <article class="info-card">
+                    <span class="tag">INFO</span>
+                    <h2>営業案内</h2>
+                    <div class="info-list">
+                        <div class="info-row">
+                            <strong>営業時間</strong>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>モーニング</strong>
+                            <span>9:00 - 11:00 / ホットサンド + コーヒー 600円</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>ランチタイム</strong>
+                            <span>11:00 - 15:00 / ランチセットなど</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>定休日</strong>
+                            <span>毎週火・水曜日</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>SNS</strong>
+                            <span><a href="https://www.instagram.com/yamanocafe202508?igsh=NGI5NGpnOGExeGZ6" target="_blank" rel="noopener noreferrer">Instagramで最新情報を見る</a></span>
+                        </div>
+                        <div class="info-row">
+                            <strong>ご予約</strong>
+                            <span>現在、予約方法は検討中です。現状のご予約は公式InstagramのDMにてお願いいたします。</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <span class="tag">ACCESS</span>
+                    <h2>アクセス</h2>
+                    <div class="info-list">
+                        <div class="info-row">
+                            <strong>住所</strong>
+                            <span>福島県いわき市小名浜南君ヶ塚町12-42</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>駐車場</strong>
+                            <span>あり(店舗の裏にあります)</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>席</strong>
+                            <span>テーブル席 / カウンター席</span>
+                        </div>
+                        <div class="info-row">
+                            <strong>ひとこと</strong>
+                            <span>福島県いわき市にある"ちょっと寄り道したくなる"カフェです。昭和レトロな空間で、手作りの温かい味をお届けしています。</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        やまのかふぇ | ごはんも、喫茶も、ほっとする時間を。
+    </footer>
+</body>
+</html>
