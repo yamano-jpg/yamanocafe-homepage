@@ -656,11 +656,27 @@
             .special,
             .takeout,
             .info-layout,
-            .menu-grid,
-            .seasonal-grid,
             .menu-list-layout,
             .posts-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: minmax(260px, 82vw);
+                overflow-x: auto;
+                padding-bottom: 12px;
+                scroll-snap-type: x mandatory;
+            }
+
+            .seasonal-grid {
+                max-width: none;
+                margin: 0;
+            }
+
+            .menu-card {
+                scroll-snap-align: start;
             }
 
             .hero {
@@ -729,12 +745,6 @@
             .gallery,
             .menu-sheets-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .menu-card img {
-                aspect-ratio: 4 / 3;
-                object-fit: contain;
-                background: #fff8ed;
             }
 
             .gallery .wide {
