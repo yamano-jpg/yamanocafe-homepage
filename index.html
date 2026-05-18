@@ -662,21 +662,17 @@
             }
 
             .menu-grid {
-                grid-template-columns: none;
-                grid-auto-flow: column;
-                grid-auto-columns: minmax(260px, 82vw);
-                overflow-x: auto;
-                padding-bottom: 12px;
-                scroll-snap-type: x mandatory;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .seasonal-grid {
-                max-width: none;
-                margin: 0;
+                max-width: 760px;
             }
 
-            .menu-card {
-                scroll-snap-align: start;
+            .menu-grid .menu-card:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 10px);
+                justify-self: center;
             }
 
             .hero {
@@ -698,27 +694,56 @@
         }
 
         @media (max-width: 680px) {
+            .shell {
+                width: min(100% - 24px, 1160px);
+            }
+
             .topbar {
                 align-items: flex-start;
                 flex-direction: column;
+                gap: 14px;
+                padding: 18px 0;
             }
 
             .nav {
-                gap: 10px 14px;
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: max-content;
+                width: 100%;
+                gap: 10px;
+                overflow-x: auto;
+                padding-bottom: 6px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav a {
+                padding: 8px 12px;
+                border: 1px solid rgba(255, 250, 241, 0.22);
+                border-radius: 999px;
+                background: rgba(255, 250, 241, 0.12);
+                white-space: nowrap;
             }
 
             .hero-inner {
-                padding: 54px 0 48px;
+                gap: 22px;
+                padding: 34px 0 32px;
             }
 
             .hero {
                 min-height: auto;
-                padding-bottom: 40px;
+                padding-bottom: 28px;
             }
 
             h1 {
                 font-size: 2.4rem;
                 line-height: 1.2;
+                margin-bottom: 18px;
+            }
+
+            .hero-lead {
+                margin-bottom: 22px;
+                font-size: 0.98rem;
+                line-height: 1.85;
             }
 
             .button {
@@ -738,7 +763,22 @@
             }
 
             .section {
-                padding: 54px 0;
+                padding: 46px 0;
+            }
+
+            .section-head {
+                gap: 14px;
+                margin-bottom: 22px;
+            }
+
+            .section-head h2 {
+                font-size: 2rem;
+            }
+
+            .section-head p,
+            .lead {
+                font-size: 0.96rem;
+                line-height: 1.85;
             }
 
             .feature-copy,
@@ -750,12 +790,75 @@
             .feature-photo,
             .special-photo img {
                 min-height: auto;
+                max-height: 360px;
+                object-fit: cover;
             }
 
             .mini-list,
             .gallery,
             .menu-sheets-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: minmax(258px, 82vw);
+                overflow-x: auto;
+                padding: 2px 0 14px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .seasonal-grid {
+                max-width: none;
+                margin: 0;
+            }
+
+            .menu-card {
+                scroll-snap-align: start;
+            }
+
+            .menu-grid .menu-card:last-child:nth-child(odd) {
+                grid-column: auto;
+                max-width: none;
+                justify-self: stretch;
+            }
+
+            .menu-body {
+                padding: 18px;
+            }
+
+            .menu-body h3 {
+                font-size: 1.18rem;
+            }
+
+            .menu-body p {
+                font-size: 0.95rem;
+                line-height: 1.75;
+            }
+
+            .hero-panel {
+                max-width: none;
+                padding: 12px;
+            }
+
+            .hero-panel img {
+                aspect-ratio: 16 / 11;
+            }
+
+            .takeout-photo img,
+            .morning-card img,
+            .menu-sheet img {
+                max-height: 520px;
+            }
+
+            .posts-grid {
+                gap: 14px;
+            }
+
+            .post-card p {
+                min-height: auto;
             }
 
             .gallery .wide {
