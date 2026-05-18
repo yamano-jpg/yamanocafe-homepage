@@ -335,6 +335,12 @@
             gap: 20px;
         }
 
+        .seasonal-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
         .menu-card,
         .post-card,
         .info-card {
@@ -346,7 +352,7 @@
         }
 
         .menu-card img {
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 3 / 4;
             object-fit: cover;
         }
 
@@ -651,6 +657,7 @@
             .takeout,
             .info-layout,
             .menu-grid,
+            .seasonal-grid,
             .menu-list-layout,
             .posts-grid {
                 grid-template-columns: 1fr;
@@ -749,7 +756,8 @@
                 </a>
                 <nav class="nav" aria-label="ページ内メニュー">
                     <a href="#about">お店について</a>
-                    <a href="#menu">おすすめ</a>
+                    <a href="#menu">ランチ</a>
+                    <a href="#seasonal">季節限定</a>
                     <a href="#menu-list">メニュー表</a>
                     <a href="#special">新メニュー</a>
                     <a href="#gallery">デザート</a>
@@ -772,7 +780,7 @@
                         <span>店舗裏に駐車場あり</span>
                     </div>
                     <div class="actions">
-                        <a class="button button-primary" href="#menu">おすすめを見る</a>
+                        <a class="button button-primary" href="#menu">ランチメニューを見る</a>
                         <a class="button button-ghost" href="https://maps.app.goo.gl/K5pyjYDAqVaxX4e99" target="_blank" rel="noopener noreferrer">Googleマップ</a>
                         <a class="button button-ghost" href="https://www.instagram.com/yamanocafe202508?igsh=NGI5NGpnOGExeGZ6" target="_blank" rel="noopener noreferrer">Instagramへ</a>
                     </div>
@@ -824,37 +832,69 @@
             <div class="shell">
                 <div class="section-head">
                     <div>
-                        <span class="tag">RECOMMEND</span>
-                        <h2>おすすめメニュー</h2>
+                        <span class="tag">LUNCH</span>
+                        <h2>ランチメニュー</h2>
                     </div>
-                    <p>ランチやメニューは季節によって変わります。<br>最新情報は店頭・Instagramでご確認ください。</p>
+                    <p>スープ・サラダ付きのランチをご用意しています。<br>ランチは季節によって異なることがあります。</p>
                 </div>
 
                 <div class="menu-grid">
                     <article class="menu-card">
-                        <img src="assets/42415_0.jpg" alt="ホットサンドランチ">
+                        <img src="assets/20859_0.jpg" alt="ナポリタンランチ">
+                        <div class="menu-body">
+                            <span class="tag">LUNCH</span>
+                            <h3>ナポリタンランチ</h3>
+                            <p>ケチャップのやさしい甘みと香ばしい香り。スープと季節のサラダ付きの、懐かしくてほっとするランチです。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/20886_0.jpg" alt="ホットサンドランチ ミートチーズ">
                         <div class="menu-body">
                             <span class="tag">LUNCH</span>
                             <h3>ホットサンドランチ</h3>
-                            <p>たまごと具材をはさんだ、香ばしいホットサンド。サラダとみそ汁も一緒に楽しめます。</p>
+                            <p>サクッと香ばしいパンに、とろけるチーズと旨みたっぷりのミートを合わせました。スープと季節のサラダ付きです。</p>
                         </div>
                     </article>
 
                     <article class="menu-card">
-                        <img src="assets/42394_0.jpg" alt="ミートドリアランチ">
+                        <img src="assets/20888_0.jpg" alt="キーマカレーランチ">
                         <div class="menu-body">
                             <span class="tag">LUNCH</span>
-                            <h3>ミートドリアランチ</h3>
-                            <p>とろけるチーズとコクのあるミートソースを重ねた、あつあつの人気ランチ。サラダとみそ汁付きで、しっかり満たされます。</p>
+                            <h3>キーマカレーランチ</h3>
+                            <p>じっくり煮込んだスパイス香るキーマカレー。やさしい味わいで、心も体も満たされるごちそうランチです。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="seasonal">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">SEASONAL</span>
+                        <h2>季節限定メニュー</h2>
+                    </div>
+                    <p>季節の味わいを楽しめる、期間限定のメニューです。<br>販売状況は店頭・Instagramでご確認ください。</p>
+                </div>
+
+                <div class="menu-grid seasonal-grid">
+                    <article class="menu-card">
+                        <img src="assets/20863_0.jpg" alt="いちごみるく">
+                        <div class="menu-body">
+                            <span class="tag">LIMITED</span>
+                            <h3>いちごみるく</h3>
+                            <p>つぶつぶいちごとまろやかミルクの、甘酸っぱくてやさしい季節のドリンクです。</p>
                         </div>
                     </article>
 
                     <article class="menu-card">
-                        <img src="assets/20620.jpg" alt="オムライスランチ">
+                        <img src="assets/20864_0.jpg" alt="かき氷">
                         <div class="menu-body">
-                            <span class="tag">LUNCH</span>
-                            <h3>オムライスランチ</h3>
-                            <p>ふんわりと焼かれたオムライス。サラダとみそ汁も一緒に楽しめます。</p>
+                            <span class="tag">LIMITED</span>
+                            <h3>かき氷</h3>
+                            <p>自家製シロップで楽しむ、ひんやり贅沢な夏のメニュー。テイクアウトもできます。</p>
                         </div>
                     </article>
                 </div>
