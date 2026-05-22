@@ -795,15 +795,25 @@
             }
 
             .mini-list,
-            .gallery,
-            .menu-sheets-grid {
+            .gallery {
                 grid-template-columns: 1fr;
             }
 
-            .menu-grid {
+            .menu-grid,
+            .menu-sheets-grid {
                 grid-template-columns: none;
                 grid-auto-flow: column;
                 grid-auto-columns: minmax(258px, 82vw);
+                overflow-x: auto;
+                padding: 2px 0 14px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .posts-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: minmax(240px, 78vw);
                 overflow-x: auto;
                 padding: 2px 0 14px;
                 scroll-snap-type: x mandatory;
@@ -816,6 +826,14 @@
             }
 
             .menu-card {
+                scroll-snap-align: start;
+            }
+
+            .menu-sheet {
+                scroll-snap-align: start;
+            }
+
+            .post-card {
                 scroll-snap-align: start;
             }
 
@@ -1064,9 +1082,9 @@
                             <h3>セットメニュー</h3>
                             <p>ランチは11:00から15:00まで。ケーキやプリンのセットも<br>カフェタイムにおすすめです。</p>
                             <div class="menu-summary-list">
-                                <div class="summary-row"><strong>ミートドリアランチ</strong><span>1,400円</span></div>
-                                <div class="summary-row"><strong>オムライスランチ</strong><span>1,300円</span></div>
-                                <div class="summary-row"><strong>ホットサンドランチ</strong><span>1,000円</span></div>
+                                <div class="summary-row"><strong>キーマカレーランチ</strong><span>1,300円</span></div>
+                                <div class="summary-row"><strong>ナポリタンランチ</strong><span>1,300円</span></div>
+                                <div class="summary-row"><strong>ホットサンドランチ</strong><span>1,100円</span></div>
                                 <div class="summary-row"><strong>ケーキセット</strong><span>850円</span></div>
                                 <div class="summary-row"><strong>プリンセット</strong><span>750円</span></div>
                             </div>
@@ -1075,16 +1093,16 @@
 
                     <div class="menu-sheets-grid">
                         <article class="menu-sheet">
-                            <img src="assets/20560_0.jpg" alt="やまのかふぇ案内とQRコード">
+                            <img src="assets/20946_0.jpg" alt="フードメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20563_0.jpg" alt="フードとスイーツのメニュー表">
+                            <img src="assets/20947_0.jpg" alt="スイーツメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20562_0.jpg" alt="ドリンクメニュー表">
+                            <img src="assets/20948_0.jpg" alt="ドリンクメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20561_0.jpg" alt="ランチセットとケーキセットのメニュー表">
+                            <img src="assets/20949_0.jpg" alt="ランチセットメニュー表">
                         </article>
                     </div>
                 </div>
