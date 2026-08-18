@@ -219,6 +219,12 @@
             color: #fffaf1;
         }
 
+        .button-icon {
+            width: 19px;
+            height: 19px;
+            flex: 0 0 auto;
+        }
+
         .hero-panel {
             padding: 16px;
             border: 1px solid rgba(255, 250, 241, 0.32);
@@ -392,17 +398,37 @@
 
         .special {
             display: grid;
-            grid-template-columns: 0.92fr 1.08fr;
+            grid-template-columns: 1fr;
             gap: 22px;
             align-items: center;
         }
 
         .special-photo img {
-            height: 100%;
+            height: auto;
             min-height: 620px;
             border-radius: 8px;
             object-fit: cover;
             box-shadow: var(--shadow);
+        }
+
+        .special-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .special-photo-grid img {
+            width: 100%;
+            height: auto;
+            min-height: 0;
+            aspect-ratio: 3 / 4;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .special-photo-grid img:first-child {
+            grid-row: auto;
         }
 
         .special-copy {
@@ -466,7 +492,7 @@
 
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 16px;
         }
 
@@ -553,6 +579,10 @@
         .morning-body p,
         .menu-summary p {
             line-height: 1.85;
+        }
+
+        .morning-note {
+            margin-top: 28px;
         }
 
         .menu-summary-list {
@@ -803,6 +833,10 @@
                 object-fit: cover;
             }
 
+            .special-photo-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             .mini-list,
             .gallery {
                 grid-template-columns: 1fr;
@@ -938,15 +972,15 @@
                     </div>
                     <div class="actions">
                         <a class="button button-primary" href="#menu">ランチメニューを見る</a>
-                        <a class="button button-ghost" href="https://maps.app.goo.gl/K5pyjYDAqVaxX4e99" target="_blank" rel="noopener noreferrer">Googleマップ</a>
-                        <a class="button button-ghost" href="https://www.instagram.com/yamanocafe202508?igsh=NGI5NGpnOGExeGZ6" target="_blank" rel="noopener noreferrer">Instagramへ</a>
+                        <a class="button button-ghost" href="https://maps.app.goo.gl/K5pyjYDAqVaxX4e99" target="_blank" rel="noopener noreferrer"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>Googleマップ</span></a>
+                        <a class="button button-ghost" href="https://www.instagram.com/yamanocafe202508?igsh=NGI5NGpnOGExeGZ6" target="_blank" rel="noopener noreferrer"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="url(#instagram-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="instagram-gradient" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse"><stop stop-color="#feda75"></stop><stop offset="0.45" stop-color="#fa7e1e"></stop><stop offset="0.7" stop-color="#d62976"></stop><stop offset="1" stop-color="#4f5bd5"></stop></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg><span>Instagramへ</span></a>
                     </div>
                 </div>
 
                 <aside class="hero-panel">
-                    <img src="assets/42415_0.jpg" alt="ホットサンドランチ">
-                    <h2>人気のホットサンドランチ</h2>
-                    <p>こんがり焼いたサンドに、サラダとみそ汁を添えて。朝にも昼にも似合う、満足感のある一皿です。</p>
+                    <img src="assets/22889.jpg" alt="人気のホットサンド（野菜）">
+                    <h2>人気のホットサンド（野菜）</h2>
+                    <p>当店人気No.1。たっぷりのたまごにシャキシャキ野菜を合わせた、ボリューム感のある当店自慢のホットサンドです。</p>
                 </aside>
             </div>
         </div>
@@ -997,20 +1031,11 @@
 
                 <div class="menu-grid">
                     <article class="menu-card">
-                        <img src="assets/20859_0.jpg" alt="ナポリタンランチ">
+                        <img src="assets/22888.jpg" alt="ナポリタンサンドランチ">
                         <div class="menu-body">
                             <span class="tag">LUNCH</span>
-                            <h3>ナポリタンランチ</h3>
-                            <p>ケチャップのやさしい甘みと香ばしい香り。スープと季節のサラダ付きの、懐かしくてほっとするランチです。</p>
-                        </div>
-                    </article>
-
-                    <article class="menu-card">
-                        <img src="assets/20886_0.jpg" alt="ホットサンドランチ ミートチーズ">
-                        <div class="menu-body">
-                            <span class="tag">LUNCH</span>
-                            <h3>ホットサンドランチ</h3>
-                            <p>サクッと香ばしいパンに、とろけるチーズと旨みたっぷりのミートを合わせました。スープと季節のサラダ付きです。</p>
+                            <h3>ナポリタンサンドランチ</h3>
+                            <p>当店自慢のナポリタンを、香ばしいホットサンドにたっぷり挟みました。サラダとみそ汁付きの、ボリューム満点ランチです。</p>
                         </div>
                     </article>
 
@@ -1020,6 +1045,15 @@
                             <span class="tag">LUNCH</span>
                             <h3>キーマカレーランチ</h3>
                             <p>じっくり煮込んだスパイス香るキーマカレー。やさしい味わいで、心も体も満たされるごちそうランチです。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/22901.jpg" alt="やまのかふぇモーニング">
+                        <div class="menu-body">
+                            <span class="tag">MORNING</span>
+                            <h3>やまのかふぇモーニング</h3>
+                            <p>モーニングセット、ホットケーキセットなど4種類をご用意。週末のゆったりした朝ごはんをお楽しみください。</p>
                         </div>
                     </article>
                 </div>
@@ -1038,11 +1072,11 @@
 
                 <div class="menu-grid seasonal-grid">
                     <article class="menu-card">
-                        <img src="assets/20863_0.jpg" alt="いちごみるく">
+                        <img src="assets/22899.jpg" alt="ミルク系各種">
                         <div class="menu-body">
                             <span class="tag">LIMITED</span>
-                            <h3>いちごみるく</h3>
-                            <p>つぶつぶいちごとまろやかミルクの、甘酸っぱくてやさしい季節のドリンクです。</p>
+                            <h3>ミルク系各種</h3>
+                            <p>抹茶みるく・マンゴーみるく・いちごみるくをご用意。やさしい甘さのドリンクを、店内でもテイクアウトでもどうぞ。</p>
                         </div>
                     </article>
 
@@ -1051,7 +1085,7 @@
                         <div class="menu-body">
                             <span class="tag">LIMITED</span>
                             <h3>かき氷</h3>
-                            <p>自家製シロップで楽しむ、ひんやり贅沢な夏のメニュー。テイクアウトもできます。</p>
+                            <p>自家製シロップで楽しむ、ひんやり贅沢な夏のメニュー。テイクアウトもできます。(+50円で練乳かけられます)</p>
                         </div>
                     </article>
                 </div>
@@ -1065,24 +1099,26 @@
                         <span class="tag">MENU LIST</span>
                         <h2>やまのかふぇ　メニュー表</h2>
                     </div>
-                    <p>価格は税込、仕入れ状況により付け合わせが変わる場合があります。</p>
+                    <p>価格は税込、仕入れ状況により付け合わせが変わる場合や、品切れとなる場合があります。</p>
                 </div>
 
                 <div class="menu-list-layout">
                     <div>
                         <article class="morning-card">
-                            <img src="assets/20559_0.jpg" alt="やまのかふぇのモーニングメニュー表">
+                            <img src="assets/22890.jpg" alt="やまのかふぇのモーニングメニュー表">
                             <div class="morning-body">
                                 <span class="tag">MORNING</span>
                                 <h3>やまのかふぇモーニング</h3>
                                 <p>
-                                    毎日9:00から11:00まで。ホットサンドとコーヒーの<br>モーニングセット、ホットケーキセットを選べます。
+                                    毎日9:00から11:00まで。ホットサンドやホットケーキと<br>コーヒーを楽しめるモーニングをご用意しています。
                                 </p>
                                 <div class="menu-summary-list">
-                                    <div class="summary-row"><strong>モーニングセット</strong><span>600円</span></div>
-                                    <div class="summary-row"><strong>ホットケーキセット</strong><span>700円</span></div>
-                                    <div class="summary-row"><strong>スペシャルモーニングセット</strong><span>900円</span></div>
+                                    <div class="summary-row"><strong>モーニングセット（ホットサンドハーフ＋コーヒー）</strong><span>650円</span></div>
+                                    <div class="summary-row"><strong>ホットケーキセット（バター・メープル付き＋コーヒー）</strong><span>700円</span></div>
+                                    <div class="summary-row"><strong>スペシャルモーニングセット（ホットサンド＋コーヒー）</strong><span>950円</span></div>
+                                    <div class="summary-row"><strong>土日限定 スペシャルホットケーキセット（ソーセージ・ベーコン・サラダ・メープル・コーヒー）</strong><span>1,000円</span></div>
                                 </div>
+                                <p class="morning-note">サラダは＋250円で付けられます。<br>コーヒー2杯目は200円です。</p>
                             </div>
                         </article>
 
@@ -1092,8 +1128,7 @@
                             <p>ランチは11:00から15:00まで。ケーキやプリンのセットも<br>カフェタイムにおすすめです。</p>
                             <div class="menu-summary-list">
                                 <div class="summary-row"><strong>キーマカレーランチ</strong><span>1,300円</span></div>
-                                <div class="summary-row"><strong>ナポリタンランチ</strong><span>1,300円</span></div>
-                                <div class="summary-row"><strong>ホットサンドランチ</strong><span>1,100円</span></div>
+                                <div class="summary-row"><strong>ナポリタンサンドランチ</strong><span>1,200円</span></div>
                                 <div class="summary-row"><strong>ケーキセット</strong><span>850円</span></div>
                                 <div class="summary-row"><strong>プリンセット</strong><span>750円</span></div>
                             </div>
@@ -1102,16 +1137,16 @@
 
                     <div class="menu-sheets-grid">
                         <article class="menu-sheet">
-                            <img src="assets/20949_0.jpg" alt="ランチセットメニュー表">
+                            <img src="assets/43829_0.jpg" alt="ランチセットメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20947_0.jpg" alt="スイーツメニュー表">
+                            <img src="assets/43831_0.jpg" alt="スイーツメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20948_0.jpg" alt="ドリンクメニュー表">
+                            <img src="assets/43830_0.jpg" alt="ドリンクメニュー表">
                         </article>
                         <article class="menu-sheet">
-                            <img src="assets/20946_0.jpg" alt="フードメニュー表">
+                            <img src="assets/43828_0.jpg" alt="フードメニュー表">
                         </article>
                     </div>
                 </div>
@@ -1138,29 +1173,68 @@
                         <div class="summary-row"><strong>ドリンク各種(フロート系をのぞく)</strong></div>
                     </div>
                     <p>
-                        テイクアウトのご予約は、公式InstagramのDM、または店頭でのご注文にてお願いいたします。
+                        テイクアウトのご予約は、公式InstagramのDM、または店頭でのご注文にてお願いいたします。(ランチタイム中や忙しい時間帯はご対応が難しい場合があります)
                     </p>
                 </article>
             </div>
         </section>
 
         <section class="section section-sky" id="special">
-            <div class="shell special">
-                <div class="special-photo">
-                    <img src="assets/42388_0.jpg" alt="ミニチョコバナナパフェ">
-                </div>
-                <article class="special-copy">
-                    <span class="tag">NEW SWEETS</span>
-                    <h2>食後にちょうどいい、ミニチョコ<br>バナナパフェ</h2>
-                    <p>
-                        バナナ、チョコ、アイスの王道しあわせパフェ。食後にも頼みやすいサイズ感で、写真にも残したくなるかわいさです。
-                    </p>
-                    <div class="badge-row">
-                        <span class="badge">普通サイズもあります</span>
-                        <span class="badge">税込450円</span>
-                        <span class="badge">写真OK</span>
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="tag">RECOMMEND</span>
+                        <h2>おすすめのドリンク・スイーツ</h2>
                     </div>
-                </article>
+                    <p>喫茶店らしいドリンク、店主手作りのケーキ、甘いホットサンドをご用意しています。くつろぎのカフェタイムをどうぞ。</p>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-card">
+                        <img src="assets/22942.jpg" alt="クリームソーダ">
+                        <div class="menu-body">
+                            <span class="tag">DRINK</span>
+                            <h3>クリームソーダ</h3>
+                            <p>シュワッと爽やかなソーダに、まろやかなバニラアイスをのせた喫茶店の定番です。600円。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/22946.jpg" alt="アイスカフェラテ">
+                        <div class="menu-body">
+                            <span class="tag">DRINK</span>
+                            <h3>アイスカフェラテ</h3>
+                            <p>コーヒーのコクとミルクのやさしい甘さを楽しめる、ひんやりおいしい定番ドリンクです。600円。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/43789.jpg" alt="ベイクドチーズケーキとガトーショコラ">
+                        <div class="menu-body">
+                            <span class="tag">SWEETS</span>
+                            <h3>店主手作りケーキ</h3>
+                            <p>定番のベイクドチーズケーキと人気のガトーショコラ。コーヒーや紅茶とご一緒にどうぞ。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/43791.jpg" alt="あんこクリームチーズホットサンド">
+                        <div class="menu-body">
+                            <span class="tag">SWEETS</span>
+                            <h3>あんこクリームチーズホットサンド</h3>
+                            <p>あんことクリームチーズの相性を楽しめる、甘じょっぱいデザート系ホットサンドです。700円。</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <img src="assets/43790.jpg" alt="チョコバナナホットサンド">
+                        <div class="menu-body">
+                            <span class="tag">SWEETS</span>
+                            <h3>チョコバナナホットサンド</h3>
+                            <p>とろけるチョコとバナナを香ばしいパンで挟んだ、食後にもぴったりの一品です。600円。</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -1195,20 +1269,16 @@
 
                 <div class="posts-grid">
                     <article class="post-card">
-                        <img src="assets/42382_0.jpg" alt="ホットサンドランチのお知らせ">
-                        <p>人気のホットサンドランチ。お得なランチプレートでゆっくりと。</p>
+                        <img src="assets/instagram-ume-squash.jpg" alt="夏季限定の自家製ウメスカッシュ">
+                        <p>季節限定メニューや新メニューの情報をいち早くお届け！</p>
                     </article>
                     <article class="post-card">
-                        <img src="assets/42383_0.jpg" alt="ミートドリアランチのお知らせ">
-                        <p>あつあつミートドリアランチ。とろけるチーズで最後までほかほか。</p>
+                        <img src="assets/instagram-cafe-page.jpg" alt="やまのかふぇの紹介ページ">
+                        <p>店主がやまのかふぇについての漫画を投稿することも!</p>
                     </article>
                     <article class="post-card">
-                        <img src="assets/42390.jpg" alt="ミニチョコバナナパフェのお知らせ">
-                        <p>新登場のミニチョコバナナパフェ。食後にもぴったりです。</p>
-                    </article>
-                    <article class="post-card">
-                        <img src="assets/42411_0.jpg" alt="ランチメニューまとめ">
-                        <p>ランチ選びに迷ったら、写真で気になる一皿を見つけてください。</p>
+                        <img src="assets/instagram-july-thanks.jpg" alt="7月のご来店への感謝を伝えるお知らせ">
+                        <p>店主の一言ややまのかふぇの日常などの投稿も!</p>
                     </article>
                 </div>
             </div>
@@ -1226,7 +1296,7 @@
                         </div>
                         <div class="info-row">
                             <strong>モーニング</strong>
-                            <span>9:00 - 11:00 / ホットサンド + コーヒー 600円</span>
+                            <span>9:00 - 11:00 </span>
                         </div>
                         <div class="info-row">
                             <strong>ランチタイム</strong>
@@ -1242,7 +1312,7 @@
                         </div>
                         <div class="info-row">
                             <strong>ご予約</strong>
-                            <span>現在、予約方法は検討中です。現状のご予約は公式InstagramのDMにてお願いいたします。</span>
+                            <span>現在、予約方法は検討中です。現状はご来店順で対応しております。</span>
                         </div>
                     </div>
                 </article>
